@@ -1,0 +1,7 @@
+.Inicial_root{
+   background-color: #121111;
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

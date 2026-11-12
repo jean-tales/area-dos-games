@@ -1,0 +1,10 @@
+.InputCustomizado_root{
+    display: flex;
+    flex-direction: column;
+}
+
+.InputCustomizado_input{
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}

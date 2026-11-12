@@ -1,0 +1,9 @@
+.AvatarUsuario_root{
+     width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgb(0, 225, 255);
+    display: flex;
+    justify-content: center;
+
+}

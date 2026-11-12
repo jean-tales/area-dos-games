@@ -1,0 +1,28 @@
+
+.PaginaCadastroJogos_root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+   
+}
+
+
+
+
+.PaginaCadastroJogos_input{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 10px;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 5px; 
+   
+}
+

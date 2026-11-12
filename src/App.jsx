@@ -1,8 +1,13 @@
 import './App.css'
 
+import PaginaCadastroJogos from './paginas/PaginaCadastroJogos/PaginaCadastroJogos';
+
 function App() {
   return (
-    <h1>projeto de games</h1>
+    <>
+    <PaginaCadastroJogos/>
+    </>
+    
   )
 }
 

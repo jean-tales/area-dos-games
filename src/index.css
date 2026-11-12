@@ -25,3 +25,13 @@
 
  --cor-cinza: #99a7bb;
 }
+
+html, body, #root {
+   height: 100%; 
+}
+
+#root{
+    display: grid;
+    grid-template-rows: 48px 1fr 48px;
+}
+
