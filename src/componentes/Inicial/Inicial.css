@@ -5,3 +5,10 @@
     flex-direction: column;
     gap: 16px;
 }
+
+.Inicial_tituloBotao{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+}

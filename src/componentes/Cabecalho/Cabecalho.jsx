@@ -1,3 +1,4 @@
+import "./Cabecalho.css";
 import AvatarUsuario from "../AvatarUsuario/AvatarUsuario";
 
 function Cabecalho() {

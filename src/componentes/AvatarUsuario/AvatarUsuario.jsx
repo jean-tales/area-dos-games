@@ -1,4 +1,4 @@
-import "./AvatarUsuario";
+import "./AvatarUsuario.css";
 
 function AvatarUsuario(props){
 

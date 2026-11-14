@@ -1,0 +1,16 @@
+.BotaoCustomizado_root{
+    padding: 8px 16px;
+    border: none;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.BotaoCustomizado_root:hover{
+    transform: scale(1.05);
+    box-shadow: #4252e0 5px 5px 8px;
+}
+
+
+.BotaoCustomizado_primario{
+   background-color:blue ;
+}

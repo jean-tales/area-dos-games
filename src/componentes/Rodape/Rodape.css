@@ -1,5 +1,5 @@
 .Rodape_root{
-    background-color: var( --cor-secundaria-clara);
+    background-color: blue;
     display: flex;
     justify-content: center;
     align-items: center;

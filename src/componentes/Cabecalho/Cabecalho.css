@@ -1,5 +1,5 @@
 .cabecalho_root{
-    background-color: var(--cor-primaria);
+    background-color: blue;
     display: flex;
     justify-content: right;
     align-items: center;
