@@ -4,6 +4,7 @@ import InputCustomizado from "../../componentes/InputCustomizado/InputCustomizad
 import BotaoCusomizado from "../../componentes/BotaoCustomizado/BotaoCustomizado";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { buscarJogos, salvarJogo } from "../../servicos/jogos.servico";
 
 
 function PaginaCadastroJogos(){
@@ -12,14 +13,18 @@ function PaginaCadastroJogos(){
   const [formJogo, setFormJogo] = useState({
     id: "",
     nomeJogo: "",
-    anoLancamento: "",
+    dataLancamento: "",
     desenvolvedora: "",
     genero: "",
     tempoJogo: "",
     linkDownload: "",
   });
 
-  const salvar = () => {}
+  const salvar = () => {
+    salvarJogo(formJogo);
+    alert("salvo com sucesso");
+    console.log(formJogo);
+  }
 
 
 
@@ -30,7 +35,7 @@ function PaginaCadastroJogos(){
           <div className="PaginaCadastroJogos_input">
              <InputCustomizado label="jogo" value={formJogo.nomeJogo} onChange={(e) => setFormJogo({...formJogo,nomeJogo: e.target.value})}  maxLength={40}/>
 
-             <InputCustomizado label="ano de lançamento" value={formJogo.anoLancamento} onChange={(e) => setFormJogo({...formJogo, anoLancamento: e.target.value})}/>
+             <InputCustomizado label="data de lançamento" type="date" value={formJogo.dataLancamento} onChange={(e) => setFormJogo({...formJogo, dataLancamento: e.target.value})}/>
 
              <InputCustomizado label="desenvolvedora" value={formJogo.desenvolvedora} onChange={(e) => setFormJogo({...formJogo, desenvolvedora: e.target.value})}/>
 
