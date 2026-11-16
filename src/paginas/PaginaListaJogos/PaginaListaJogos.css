@@ -1,0 +1,27 @@
+.PaginaListaJogos_root{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(18, 145, 204);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.PaginaListaJogos_root:hover{
+    transform: scale(1.01);
+    box-shadow: #1348aa 5px 5px 8px;
+}
+
+.PaginaListaJogos_jogo{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.PaginaListaJogos_icones{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 15px;
+}

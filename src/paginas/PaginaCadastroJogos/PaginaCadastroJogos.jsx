@@ -24,6 +24,7 @@ function PaginaCadastroJogos(){
     salvarJogo(formJogo);
     alert("salvo com sucesso");
     console.log(formJogo);
+    navigate('/lista-jogos');
   }
 
 
