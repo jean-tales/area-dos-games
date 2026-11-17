@@ -7,7 +7,7 @@ export const salvarJogo = (jogo) => {
       jogo.id = Date.now();
       jogos.push(jogo);
     } else {
-      const index = jogos.findIndex(() => jogo.id === jogo.id);
+      const index = jogos.findIndex((j) => j.id === jogo.id);
       jogo[index] = jogo;
     }
 
