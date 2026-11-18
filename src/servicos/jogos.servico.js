@@ -8,10 +8,10 @@ export const salvarJogo = (jogo) => {
       jogos.push(jogo);
     } else {
       const index = jogos.findIndex((j) => j.id === jogo.id);
-      jogo[index] = jogo;
+      jogos[index] = jogo;
     }
 
-    salvarNoLocalStorage("jogos", jogos)
+    salvarNoLocalStorage("jogos", jogos);
  }
 
 

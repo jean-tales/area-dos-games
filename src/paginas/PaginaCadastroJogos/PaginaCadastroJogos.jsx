@@ -20,6 +20,20 @@ function PaginaCadastroJogos(){
     linkDownload: "",
   });
 
+  const params = useParams();
+  useEffect(() => {
+    if (params.id) {
+      const jogosParaEditar = buscarJogos().find(
+        (item) => item.id === +params.id,
+      );
+      if (jogosParaEditar) {
+        setFormJogo(jogosParaEditar);
+      }
+    }
+  }, [params.id]);
+
+
+
   const salvar = () => {
     salvarJogo(formJogo);
     alert("salvo com sucesso");

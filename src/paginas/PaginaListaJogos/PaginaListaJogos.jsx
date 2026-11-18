@@ -6,6 +6,7 @@ import { salvarNoLocalStorage } from '../../servicos/localStorage.servico';
 import "./PaginaListaJogos.css"
 import { FaTrash } from "react-icons/fa";
 import { FaPenFancy } from "react-icons/fa";
+import InputCustomizado from '../../componentes/InputCustomizado/InputCustomizado';
 
 
 function PaginaListaJogos(){
@@ -22,6 +23,11 @@ function PaginaListaJogos(){
      };
 
 
+     const editarJogo = (jogoEditado) => {
+       navigate ('/cadastro-jogos/' + jogoEditado.id);
+     }
+
+
 
 
 
@@ -34,6 +40,7 @@ function PaginaListaJogos(){
 
     return <Inicial voltarPara="/">
         <h2> lista de jogos</h2>
+        <InputCustomizado label="pesquisar" placeholder="digite o nome do jogo" value={pesquisar}  onChange={(e) => setPesquisar(e.target.value)} />
         {jogosFiltrados.map((item, index) =>{
             return (
                 <div key={index} className="PaginaListaJogos_root">
@@ -47,7 +54,7 @@ function PaginaListaJogos(){
                  </div>
                  <div className='PaginaListaJogos_icones'>
                      <FaTrash size={24} color="red" onClick={() => excluirJogo(item)} />
-                     <FaPenFancy size={24} />
+                     <FaPenFancy size={24} onClick={() => editarJogo(item)} />
                  </div>
                 </div>
             )
