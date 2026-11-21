@@ -3,7 +3,7 @@ import "./InputCustomizado.css";
 
 function InputCustomizado(props){
     return <div className="InputCustomizado_root">
-        <span>
+        <span className="label">
             {props.label}
         </span>
         <input {...props} className="InputCustomizado_input"/>

@@ -9,8 +9,8 @@ function PaginaInicial(){
 
     return <Inicial>
        <div className='Principal_root'>
-        <h2>página inicial</h2>
-        <BotaoCustomizado tipo="primario" aoClicar={() => navigate('cadastro-jogos')}>inserir um   jogo</BotaoCustomizado>
+        <h2>área dos games</h2>
+        <BotaoCustomizado tipo="primario" aoClicar={() => navigate('cadastro-jogos')}>inserir um jogo</BotaoCustomizado>
         <BotaoCustomizado tipo="primario"  aoClicar={() => navigate('lista-jogos')}>lista de jogos</BotaoCustomizado>
        </div>
     </Inicial>

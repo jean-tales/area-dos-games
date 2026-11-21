@@ -1,9 +1,10 @@
 .Inicial_root{
-   background-color: #121111;
+   background-color: #1d1e22;
     padding: 16px 8px;
     display: flex;
     flex-direction: column;
     gap: 16px;
+   
 }
 
 .Inicial_tituloBotao{
@@ -12,3 +13,4 @@
     gap: 4px;
 
 }
+

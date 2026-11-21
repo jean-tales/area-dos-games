@@ -1,8 +1,8 @@
 import './App.css'
 import Cabecalho from './componentes/Cabecalho/Cabecalho';
 import Rodape from './componentes/Rodape/Rodape';
-import PaginaCadastroJogos from './paginas/PaginaCadastroJogos/PaginaCadastroJogos';
-import PaginaInicial from './paginas/PaginaInicial/PaginaInicial';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 import Roteador from './Roteador';
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
     <Cabecalho/>
     <Roteador/>
     <Rodape/>
+    <ToastContainer />
     </>
     
   )

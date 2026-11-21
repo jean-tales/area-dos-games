@@ -6,6 +6,7 @@ import { salvarNoLocalStorage } from '../../servicos/localStorage.servico';
 import "./PaginaListaJogos.css"
 import { FaTrash } from "react-icons/fa";
 import { FaPenFancy } from "react-icons/fa";
+import { toast } from "react-toastify";
 import InputCustomizado from '../../componentes/InputCustomizado/InputCustomizado';
 
 
@@ -19,6 +20,7 @@ function PaginaListaJogos(){
             const jogoDeletado = listaJogos.filter((item) => item.id !== jogoParaExcluir.id)
             setListaJogos(jogoDeletado);
             salvarNoLocalStorage("jogos", jogoDeletado);
+            toast.success("jogo excluido com sucesso");
          }
      };
 
@@ -39,8 +41,10 @@ function PaginaListaJogos(){
 
 
     return <Inicial voltarPara="/">
-        <h2> lista de jogos</h2>
-        <InputCustomizado label="pesquisar" placeholder="digite o nome do jogo" value={pesquisar}  onChange={(e) => setPesquisar(e.target.value)} />
+        <div className='titulo'>
+          <h2>lista de jogos</h2>
+        </div>
+        <InputCustomizado label="pesquisar" placeholder="digite o nome do jogo" value={pesquisar}  onChange={(e) => setPesquisar(e.target.value)}/>
         {jogosFiltrados.map((item, index) =>{
             return (
                 <div key={index} className="PaginaListaJogos_root">
@@ -54,7 +58,7 @@ function PaginaListaJogos(){
                  </div>
                  <div className='PaginaListaJogos_icones'>
                      <FaTrash size={24} color="red" onClick={() => excluirJogo(item)} />
-                     <FaPenFancy size={24} onClick={() => editarJogo(item)} />
+                     <FaPenFancy size={24} color="green" onClick={() => editarJogo(item)} />
                  </div>
                 </div>
             )

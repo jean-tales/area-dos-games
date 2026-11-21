@@ -5,6 +5,7 @@ import BotaoCusomizado from "../../componentes/BotaoCustomizado/BotaoCustomizado
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { buscarJogos, salvarJogo } from "../../servicos/jogos.servico";
+import { toast } from "react-toastify";
 
 
 function PaginaCadastroJogos(){
@@ -36,7 +37,7 @@ function PaginaCadastroJogos(){
 
   const salvar = () => {
     salvarJogo(formJogo);
-    alert("salvo com sucesso");
+    toast.success("jogo salvo com sucesso");
     console.log(formJogo);
     navigate('/lista-jogos');
   }
@@ -47,6 +48,7 @@ function PaginaCadastroJogos(){
 
     return <Inicial voltarPara="/">
       <div className="PaginaCadastroJogos_hoot">
+         <h2>cadastre um jogo</h2>
           <div className="PaginaCadastroJogos_input">
              <InputCustomizado label="jogo" value={formJogo.nomeJogo} onChange={(e) => setFormJogo({...formJogo,nomeJogo: e.target.value})}  maxLength={40}/>
 
@@ -61,7 +63,7 @@ function PaginaCadastroJogos(){
              <InputCustomizado label="link para download" value={formJogo.linkDownload} onChange={(e) => setFormJogo({...formJogo, linkDownload: e.target.value})}/>
 
                <div className="salvar">
-                  <BotaoCusomizado aoClicar={salvar}>salvar</BotaoCusomizado>
+                  <BotaoCusomizado tipo="primario" aoClicar={salvar}>salvar</BotaoCusomizado>
                </div> 
           </div>
       </div>

@@ -1,16 +1,17 @@
 .BotaoCustomizado_root{
-    padding: 8px 16px;
+    padding: 10px 16px;
     border: none;
-    width: 50%;
+    width: 40%;
     border-radius: 10px;
 }
 
 .BotaoCustomizado_root:hover{
     transform: scale(1.05);
-    box-shadow: #4252e0 5px 5px 8px;
+    box-shadow: #1b2791 5px 5px 8px;
+    cursor: pointer;
 }
 
 
 .BotaoCustomizado_primario{
-   background-color:rgb(0, 68, 255) ;
+   background-color: #266bec;
 }
