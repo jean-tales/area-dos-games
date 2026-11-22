@@ -32,12 +32,19 @@ function PaginaCadastroJogos() {
     }
   }, [params.id]);
 
+
   const salvar = () => {
+    if (!formJogo.nomeJogo.trim()) {
+      toast.error("o campo jogo é obrigatório");
+      return;
+    }
+
     salvarJogo(formJogo);
     toast.success("jogo salvo com sucesso");
     console.log(formJogo);
     navigate("/lista-jogos");
   };
+  
 
   return (
     <Inicial voltarPara="/">
